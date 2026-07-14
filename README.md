@@ -21,6 +21,10 @@ npm run dev
 
 Chaves de IA nunca devem usar o prefixo `VITE_`. O pipeline Claude/Gemini será executado somente no servidor.
 
+Para persistir as gerações, aplique `supabase/schema.sql` e configure `SUPABASE_URL` e
+`SUPABASE_SERVICE_ROLE_KEY` exclusivamente no backend. Sem essas variáveis, o Estúdio continua
+funcionando em modo demonstrativo e informa que o resultado não foi persistido.
+
 ## Estados de uma questão
 
 - `especialista`: revisão humana confirmada;
