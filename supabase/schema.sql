@@ -105,3 +105,34 @@ begin
 end $$;
 revoke all on function public.review_question(uuid,text,boolean,boolean,text) from public;
 grant execute on function public.review_question(uuid,text,boolean,boolean,text) to authenticated;
+
+-- Painel nominal restrito ao administrador. Nenhum e-mail é retornado.
+create or replace function public.admin_dashboard() returns jsonb
+language plpgsql stable security definer set search_path=public as $$
+declare result jsonb;
+begin
+  if public.current_app_role()<>'admin' then raise exception 'Acesso administrativo negado'; end if;
+  select jsonb_build_object(
+    'summary',jsonb_build_object(
+      'students',(select count(*) from public.profiles where role='student'),
+      'attempts',(select count(*) from public.attempts),
+      'active7',(select count(distinct user_id) from public.attempts where created_at>=now()-interval '7 days'),
+      'active30',(select count(distinct user_id) from public.attempts where created_at>=now()-interval '30 days'),
+      'correct_rate',(select coalesce(round(100.0*count(*) filter(where is_correct)/nullif(count(*),0),1),0) from public.attempts),
+      'high_confidence_errors',(select count(*) from public.attempts where not is_correct and confidence=3),
+      'avg_response_ms',(select coalesce(round(avg(response_time_ms)),0) from public.attempts where response_time_ms is not null),
+      'ai_cost_usd',(select coalesce(round(sum((provenance->>'estimated_cost_usd')::numeric),4),0) from public.question_versions where provenance ? 'estimated_cost_usd')
+    ),
+    'students',coalesce((select jsonb_agg(row_to_json(s) order by s.name) from (
+      select p.id,p.name,p.phase,count(a.id) attempts,
+        coalesce(round(100.0*count(a.id) filter(where a.is_correct)/nullif(count(a.id),0),1),0) correct_rate,
+        count(a.id) filter(where not a.is_correct and a.confidence=3) high_confidence_errors,
+        max(a.created_at) last_activity
+      from public.profiles p left join public.attempts a on a.user_id=p.id
+      where p.role='student' group by p.id,p.name,p.phase
+    ) s),'[]'::jsonb)
+  ) into result;
+  return result;
+end $$;
+revoke all on function public.admin_dashboard() from public;
+grant execute on function public.admin_dashboard() to authenticated;
