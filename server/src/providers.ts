@@ -1,0 +1,8 @@
+import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenAI } from '@google/genai';
+type Usage={provider:'anthropic'|'gemini';model:string;inputTokens:number;outputTokens:number};
+export type ProviderResult={text:string;usage:Usage};
+export interface ModelProvider{generate(system:string,prompt:string):Promise<ProviderResult>}
+export class ClaudeProvider implements ModelProvider{private client=new Anthropic({apiKey:process.env.ANTHROPIC_API_KEY});async generate(system:string,prompt:string){const model=process.env.ANTHROPIC_MODEL||'claude-sonnet-4-6';const r=await this.client.messages.create({model,max_tokens:3000,system,messages:[{role:'user',content:prompt}]});const text=r.content.filter(x=>x.type==='text').map(x=>x.text).join('');return{text,usage:{provider:'anthropic' as const,model,inputTokens:r.usage.input_tokens,outputTokens:r.usage.output_tokens}}}}
+export class GeminiProvider implements ModelProvider{private client=new GoogleGenAI({apiKey:process.env.GEMINI_API_KEY||''});async generate(system:string,prompt:string){const model=process.env.GEMINI_MODEL||'gemini-3-flash-preview';const r=await this.client.models.generateContent({model,contents:prompt,config:{systemInstruction:system,responseMimeType:'application/json'}});return{text:r.text||'',usage:{provider:'gemini' as const,model,inputTokens:r.usageMetadata?.promptTokenCount||0,outputTokens:r.usageMetadata?.candidatesTokenCount||0}}}}
+export function providers(){if(!process.env.ANTHROPIC_API_KEY||!process.env.GEMINI_API_KEY)throw new Error('ANTHROPIC_API_KEY e GEMINI_API_KEY são obrigatórias no servidor');return{generator:new ClaudeProvider(),reviewer:new GeminiProvider()}}
