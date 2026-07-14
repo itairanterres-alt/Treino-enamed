@@ -8,4 +8,5 @@ import './auth.css';
 import './studio.css';
 import './persistence.css';
 import './editorial.css';
+import './admin-dashboard.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><AuthProvider><App/></AuthProvider></React.StrictMode>);
