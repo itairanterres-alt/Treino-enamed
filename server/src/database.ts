@@ -25,6 +25,17 @@ function database() {
   return client;
 }
 
+export async function assertEditorToken(authorization?: string) {
+  const db = database();
+  if (!db) return;
+  const token = authorization?.startsWith('Bearer ') ? authorization.slice(7) : '';
+  if (!token) throw new Error('AUTH_REQUIRED');
+  const { data, error } = await db.auth.getUser(token);
+  if (error || !data.user) throw new Error('AUTH_REQUIRED');
+  const { data: profile } = await db.from('profiles').select('role').eq('id', data.user.id).maybeSingle();
+  if (!profile || !['reviewer', 'admin'].includes(profile.role)) throw new Error('EDITOR_REQUIRED');
+}
+
 export async function savePipelineResult(blueprint: unknown, result: PipelineResult): Promise<SavedQuestion | null> {
   const db = database();
   if (!db) return null;
