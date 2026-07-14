@@ -1,16 +1,17 @@
 import { useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
-import { BookOpenCheck, Brain, ChartNoAxesColumnIncreasing, ChevronRight, CircleAlert, FlaskConical, Home, Library, LogOut, RotateCcw, ShieldCheck, Sparkles } from 'lucide-react';
+import { BookOpenCheck, Brain, ChartNoAxesColumnIncreasing, ChevronRight, CircleAlert, ClipboardCheck, FlaskConical, Home, Library, LogOut, RotateCcw, ShieldCheck, Sparkles } from 'lucide-react';
 import { questions } from './data';
 import type { Alternative, Attempt, Question } from './types';
 import { useAuth } from './auth';
 import { Login } from './Login';
 import { AdminDashboard } from './AdminDashboard';
 import { StudioPanel } from './StudioPanel';
+import { EditorialQueue } from './EditorialQueue';
 
-type Page='home'|'train'|'review'|'progress'|'studio'|'admin'|'about'|'privacy'|'ai';
+type Page='home'|'train'|'review'|'progress'|'studio'|'editorial'|'admin'|'about'|'privacy'|'ai';
 const labels={especialista:'Revisada por especialista',verificada_ia:'Verificada automaticamente',experimental:'Experimental'} as const;
-const nav=[['home','Início',Home],['train','Treinar',Brain],['review','Revisar',RotateCcw],['progress','Progresso',ChartNoAxesColumnIncreasing],['studio','Estúdio',FlaskConical]] as const;
+const nav=[['home','Início',Home],['train','Treinar',Brain],['review','Revisar',RotateCcw],['progress','Progresso',ChartNoAxesColumnIncreasing]] as const;
 
 function useAttempts(){
  const [attempts,setAttempts]=useState<Attempt[]>(()=>JSON.parse(localStorage.getItem('treino-attempts')||'[]'));
@@ -24,7 +25,8 @@ export function App(){
  if(!accepted)return <Consent onAccept={()=>{localStorage.setItem('treino-consent-v1','accepted');setAccepted(true)}}/>;
  if(loading)return <div className="loginPage">Verificando acesso…</div>;
  if(!user)return <Login/>;
- return <div className="shell"><aside><div className="brand"><span>T</span><div>Treino <b>ENAMED</b><small>{user.mode==='demo'?'modo demonstrativo':'acesso protegido'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button className={page===id?'active':''} onClick={()=>setPage(id)} key={id}><Icon size={19}/>{label}</button>)}{user.role==='admin'&&<button className={page==='admin'?'active':''} onClick={()=>setPage('admin')}><ShieldCheck size={19}/>Administração</button>}<button onClick={()=>signOut()}><LogOut size={19}/>Sair</button></nav><div className="independent"><CircleAlert size={18}/><span>{user.name} · {user.role}<br/>Ferramenta independente e não oficial.</span></div></aside><main>{page==='home'&&<HomePage attempts={attempts} go={setPage}/>} {page==='train'&&<Training add={add}/>} {page==='review'&&<Review attempts={attempts}/>} {page==='progress'&&<Progress attempts={attempts}/>} {page==='studio'&&<StudioPanel/>}{page==='admin'&&user.role==='admin'&&<AdminDashboard attempts={attempts}/>} {page==='about'&&<About/>}{page==='privacy'&&<Privacy/>}{page==='ai'&&<AIUse/>}<Footer go={setPage}/></main></div>
+ const editor=user.role==='reviewer'||user.role==='admin';
+ return <div className="shell"><aside><div className="brand"><span>T</span><div>Treino <b>ENAMED</b><small>{user.mode==='demo'?'modo demonstrativo':'acesso protegido'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button className={page===id?'active':''} onClick={()=>setPage(id)} key={id}><Icon size={19}/>{label}</button>)}{editor&&<><button className={page==='studio'?'active':''} onClick={()=>setPage('studio')}><FlaskConical size={19}/>Estúdio</button><button className={page==='editorial'?'active':''} onClick={()=>setPage('editorial')}><ClipboardCheck size={19}/>Fila editorial</button></>}{user.role==='admin'&&<button className={page==='admin'?'active':''} onClick={()=>setPage('admin')}><ShieldCheck size={19}/>Administração</button>}<button onClick={()=>signOut()}><LogOut size={19}/>Sair</button></nav><div className="independent"><CircleAlert size={18}/><span>{user.name} · {user.role}<br/>Ferramenta independente e não oficial.</span></div></aside><main>{page==='home'&&<HomePage attempts={attempts} go={setPage}/>} {page==='train'&&<Training add={add}/>} {page==='review'&&<Review attempts={attempts}/>} {page==='progress'&&<Progress attempts={attempts}/>} {page==='studio'&&editor&&<StudioPanel/>}{page==='editorial'&&editor&&<EditorialQueue/>}{page==='admin'&&user.role==='admin'&&<AdminDashboard attempts={attempts}/>} {page==='about'&&<About/>}{page==='privacy'&&<Privacy/>}{page==='ai'&&<AIUse/>}<Footer go={setPage}/></main></div>
 }
 
 function Consent({onAccept}:{onAccept:()=>void}){const [terms,setTerms]=useState(false);const [ai,setAi]=useState(false);return <div className="consentPage"><div className="consentCard"><div className="brand dark"><span>T</span><div>Treino <b>ENAMED</b><small>protótipo independente</small></div></div><p className="eyebrow">ANTES DE COMEÇAR</p><h1>Treino transparente, dados protegidos.</h1><p>Esta ferramenta é independente e seus resultados são exclusivamente formativos. Questões podem ter sido produzidas com assistência de inteligência artificial.</p><label><input type="checkbox" checked={terms} onChange={e=>setTerms(e.target.checked)}/><span>Li e concordo com os Termos de Uso e com o tratamento necessário dos meus dados para funcionamento do aplicativo.</span></label><label><input type="checkbox" checked={ai} onChange={e=>setAi(e.target.checked)}/><span>Compreendo que a IA pode cometer erros e que questões sem revisão humana serão identificadas.</span></label><button className="primary full" disabled={!terms||!ai} onClick={onAccept}>Entrar no protótipo <ChevronRight size={18}/></button><small className="draftWarning">Minutas para prototipação. Revisão jurídica obrigatória antes de uso público.</small></div></div>}
