@@ -6,4 +6,5 @@ import './styles.css';
 import './legal.css';
 import './auth.css';
 import './studio.css';
+import './persistence.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><AuthProvider><App/></AuthProvider></React.StrictMode>);
