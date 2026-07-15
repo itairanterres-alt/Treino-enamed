@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: treino-enamed
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      - key: AI_DAILY_BUDGET_USD
+        value: "2"
+      - key: AI_MAX_REPAIR_CYCLES
+        value: "2"
