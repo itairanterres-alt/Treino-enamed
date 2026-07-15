@@ -1,0 +1,45 @@
+{
+  "source": "ENAMED 2025 — Caderno 01",
+  "questions_total": 100,
+  "official_statuses": {
+    "administratively_annulled": 1,
+    "annulled": 6,
+    "excluded": 3,
+    "valid": 90
+  },
+  "valid_reference_items": 90,
+  "stem_words": {
+    "min": 32,
+    "median": 88.5,
+    "mean": 96.7,
+    "max": 243
+  },
+  "total_words": {
+    "min": 49,
+    "median": 138.5,
+    "mean": 147.6,
+    "max": 292
+  },
+  "alternative_words": {
+    "min": 1,
+    "median": 9.0,
+    "mean": 11.7,
+    "max": 48
+  },
+  "term_presence": {
+    "diagnosis": 32,
+    "conduct": 29,
+    "treatment": 12,
+    "management": 4,
+    "test_or_exam": 48,
+    "medication": 7,
+    "primary_care": 30,
+    "emergency": 13,
+    "sus": 0
+  },
+  "pages": {
+    "first": 3,
+    "last": 26
+  },
+  "structural_failures": []
+}
