@@ -1,0 +1,4 @@
+import{describe,expect,it}from'vitest';import{rubricIssues}from'./review-gate.js';
+const dimension={score:2 as const,evidence:'Critério integralmente atendido.'};
+const review={chosen_answer:'A' as const,safe:true,rubric:{decision_focus:dimension,data_sufficiency:dimension,distractor_plausibility:dimension,cue_absence:dimension,clinical_safety:dimension},blocking_issues:[],quality_issues:[],source_needs_check:true,recommendation:'approve' as const};
+describe('gate da régua qualitativa',()=>{it('aprova somente dimensões integralmente atendidas',()=>expect(rubricIssues(review)).toEqual([]));it('expõe dimensão que exige reparo',()=>expect(rubricIssues({...review,rubric:{...review.rubric,cue_absence:{score:1,evidence:'A alternativa correta é muito mais específica.'}}})).toEqual(['Ausência de pistas: A alternativa correta é muito mais específica.']))});
