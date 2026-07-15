@@ -1,0 +1,1121 @@
+{
+  "source": {
+    "title": "ENAMED 2025 — Caderno 01 — Gabarito definitivo",
+    "kind": "official_enamed",
+    "usage_policy": "publishable",
+    "rights_verified": true,
+    "publisher": "Inep",
+    "year": 2025,
+    "source_url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enamed",
+    "metadata": {
+      "edition": "2025",
+      "booklet": "01",
+      "question_count": 100,
+      "source_pdf_sha256": "c0e134b3b7a443321921604466d66e4349cfff295d5403ebca9fcf2ba7845562",
+      "source_text_sha256": "ef570232f4c0d5d5f34c5b9fabff748c3f50c27ee31a8017e49d92c816cd358d",
+      "extraction_status": "key_only"
+    }
+  },
+  "items": [
+    {
+      "external_id": "ENAMED2025-C01-Q001",
+      "locator": "Questão 1",
+      "content_hash": "69d71803c50e11f5446d41873f292462c34ddd6a441af50b427c0f4145ee94b6",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q002",
+      "locator": "Questão 2",
+      "content_hash": "f93a44b4c8b367d74466a3ee8cd2e57b3cec9f3d26e925862f37387b651e4d62",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "excluded",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q003",
+      "locator": "Questão 3",
+      "content_hash": "2cda86f98ee4328bd1cd79902bee4f4d752335ee4946b9e3e6d0f5fd8114c250",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q004",
+      "locator": "Questão 4",
+      "content_hash": "0705c043cb2bf007c5d00af3ba8214bbaf690c8b981c3e90edca6f94b26b0193",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q005",
+      "locator": "Questão 5",
+      "content_hash": "5e575129db43b557f6eaac2941a01609efbe9391f401573d668a19f204fbc65a",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q006",
+      "locator": "Questão 6",
+      "content_hash": "1a7d9edef1efd2bad2fa59e9f055ab1f9546da8e21dcb3f3f51f990ab4a07be7",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q007",
+      "locator": "Questão 7",
+      "content_hash": "be567e8432a359053d47117a385c70267dc3b1cf08f9177a2e0d2597b4ec4893",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q008",
+      "locator": "Questão 8",
+      "content_hash": "ff6491ebe54bcdb6520cf0376b5ae24a13cf31b0e8b7b5eb377570cc6ab11136",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q009",
+      "locator": "Questão 9",
+      "content_hash": "6c693e35b32395f19558d5be05264f7122ca9320c440268b3c4ae2d8e2690d13",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q010",
+      "locator": "Questão 10",
+      "content_hash": "21b07e9344b2c8e685861d72d92db9a7a1a5f8a34661faaf69b384df48144ee4",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "administratively_annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q011",
+      "locator": "Questão 11",
+      "content_hash": "2370969047b1fcb04d5cf847721fdfa02771b7c77ff40d937887836d32b69410",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q012",
+      "locator": "Questão 12",
+      "content_hash": "66e92704cc2a4cf3c3df1cd3520ae90934f48c803682179eb9738cb62399ef79",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q013",
+      "locator": "Questão 13",
+      "content_hash": "22e535b00d134de7542d843baf9343bc4751ae6bc8b681b66a084e1033158a8c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q014",
+      "locator": "Questão 14",
+      "content_hash": "29ff4e0ece50c54fcc3fc4a44b37415610fb6d1b386461e07dffcaf0d7cf5dcc",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q015",
+      "locator": "Questão 15",
+      "content_hash": "0eb09e537b425e19d606ab27aaee06614303919c620cf7d5058b8f42ac90b9f9",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q016",
+      "locator": "Questão 16",
+      "content_hash": "3ac5bc9ea7398026a43f537dd596667617eeb10648202b6a437b07a751bde464",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q017",
+      "locator": "Questão 17",
+      "content_hash": "c81e17e50eca702da6c11b3b03642e3e1536bb6c869e8f7b5ac0c23436ec6500",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q018",
+      "locator": "Questão 18",
+      "content_hash": "4155e9be6f666e51dc4e0a9e0e9f338d27362ffd419f475af6ac7bd4a709e44c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q019",
+      "locator": "Questão 19",
+      "content_hash": "5c83e77492a616277797804146fa50dd68c526dcafed78d307e782bb15f9d0d1",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q020",
+      "locator": "Questão 20",
+      "content_hash": "910624b8c37a4b19014f42344581fe46a87f652a182d46ba61970a238e688568",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q021",
+      "locator": "Questão 21",
+      "content_hash": "ad31e3074644c14975dbbd011e4f5ad6c0f29e7e0a74d6166004398fd5b8ec07",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q022",
+      "locator": "Questão 22",
+      "content_hash": "3f1625aaec76230bcee91bee542b51c59b9afb6f5eb7403728c380e78b9a3de2",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q023",
+      "locator": "Questão 23",
+      "content_hash": "e96326dc11ddd7eb92690c2818cec7c4b62caee53f9d05e24dd3da55937e5575",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q024",
+      "locator": "Questão 24",
+      "content_hash": "dbe11d7eb0badbbd7c0047722b9fa727b35b281716a81c369c7a256c63845754",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q025",
+      "locator": "Questão 25",
+      "content_hash": "e6084df8b8685834f9a0b0ec4f4354779c12ebc1f40f238f26dc2e9c51fb3d26",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q026",
+      "locator": "Questão 26",
+      "content_hash": "5a6ad832fa60cc0462f7338a6d9bdc44721348fb109f2c8517226730b4026639",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q027",
+      "locator": "Questão 27",
+      "content_hash": "ab2f9498903eb96e7b473989923f26346ba7a533d5b9362379c14f62b7fd8b9d",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q028",
+      "locator": "Questão 28",
+      "content_hash": "9e5739c845eec70e4feef937f008a0f100d8ff1d0a6df0b11eecab3c5dad8dcc",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q029",
+      "locator": "Questão 29",
+      "content_hash": "cf70bc9f35c1ee66c2f134999b03a09d48c7c807c50ff7edd84b0ca960745ffe",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q030",
+      "locator": "Questão 30",
+      "content_hash": "bc4af1771429dd31ecef7bba761a8ad3b94866cef87573200ceffce19c616b0c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q031",
+      "locator": "Questão 31",
+      "content_hash": "2d0957e6c44f6d666763ed97a9e519975b754e331d8e9418acd9360e60ad110f",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q032",
+      "locator": "Questão 32",
+      "content_hash": "d76392b827a745b38e2179d2e936d24e77d6359b70f49bc03c742cb9bd11d1e8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q033",
+      "locator": "Questão 33",
+      "content_hash": "f0054e42abd8d543907390411c5dbdf47858cf0dec467b615b0768d8cda4fae6",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q034",
+      "locator": "Questão 34",
+      "content_hash": "e30b4c4c5ff21ffba68d7e7c5ab7239532a6f44acaa3fb2c4a910fa31ed759bf",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q035",
+      "locator": "Questão 35",
+      "content_hash": "e849e213e41ec58a1c7d7b9060d73311e9a6e0302259c137369260dd80b64ea1",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q036",
+      "locator": "Questão 36",
+      "content_hash": "17d969446f29602a1893eaf5fcb0e18c2603f6df6c62f27782b2491b54cc3dd5",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q037",
+      "locator": "Questão 37",
+      "content_hash": "02ee209a9365b86aa1575caa65b448037d2b2019c10dee5e34f95f8581484f12",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q038",
+      "locator": "Questão 38",
+      "content_hash": "d85b9841bc38ec3f50b0bc4b922ef076fcc20d8250b4e02ae90985d96e76bca2",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q039",
+      "locator": "Questão 39",
+      "content_hash": "4f7591199fc4e30211fc3ff1657f44877896a129dba5b708b5776a076d53d36a",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q040",
+      "locator": "Questão 40",
+      "content_hash": "a469175e9f25c252f30b5f14c6ce3a7bc3210a8cc800a502ffbf8529235517a8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "excluded",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q041",
+      "locator": "Questão 41",
+      "content_hash": "bdfac29bc265342933d2f72eed63cfae747704382d8a2137ed1925fd8748eeca",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q042",
+      "locator": "Questão 42",
+      "content_hash": "b9b559c4d26f36602442918672d59bb7193674fb42ad29f7cbc7e8232ea66695",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q043",
+      "locator": "Questão 43",
+      "content_hash": "5a9749edcaeddac43b88597863fb7153ca1e0024de88ceb1888482eb2be6f590",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q044",
+      "locator": "Questão 44",
+      "content_hash": "bd93624a04d0c0654795294302a1a8fcd86c24c7b14fd5a0c8148fee0792956f",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q045",
+      "locator": "Questão 45",
+      "content_hash": "f5fbef070a1be51fafdee529ed1b8d45478c65a2108cedd98a8d0b77c72a03a3",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q046",
+      "locator": "Questão 46",
+      "content_hash": "8531f1cd2d8e0aec46e41cf27a6f3fc09fda6bd66894f140718355419acb3896",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q047",
+      "locator": "Questão 47",
+      "content_hash": "634d0158959c2df2d9752646948d4f2b9980487eca87cdd87730558a664857d0",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q048",
+      "locator": "Questão 48",
+      "content_hash": "5bdbde52a93b8be8f8eeb92f10c64b73ae3175151250345540b409dc64395bc0",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q049",
+      "locator": "Questão 49",
+      "content_hash": "6de01ebd8a1a35c5382adfda42cc3cadb28826925b9951148df9ab43c917ce22",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q050",
+      "locator": "Questão 50",
+      "content_hash": "0d092d3a1b77188ab07cbcdc52b3388ca94a199396cf6280fc57fff18508c82c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q051",
+      "locator": "Questão 51",
+      "content_hash": "c46b827cb1c9657d463a30e9d21d8cc40006875ee98dd9451701d90f623bb6b8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q052",
+      "locator": "Questão 52",
+      "content_hash": "51446b90899689fc2e05ae433a21f7d5486c1a008ae3ee5a7507c7e7cb1727e4",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q053",
+      "locator": "Questão 53",
+      "content_hash": "a68a08d50b0aeab57e5047fe038f5b2156304bcf733c81c2d131952eea20b055",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q054",
+      "locator": "Questão 54",
+      "content_hash": "efe1a165759e6393d7ece57b2c14d21580e5b8ce3ecd1c7b7a29cf57f0fd40e8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q055",
+      "locator": "Questão 55",
+      "content_hash": "564069c2550905a1a9598e7a8655ae734947b3822a844edad74f6f676686edac",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q056",
+      "locator": "Questão 56",
+      "content_hash": "e5e2970c64c57eb87baaba11c300be9221f1c7584962402b2c088caf7eb240ae",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q057",
+      "locator": "Questão 57",
+      "content_hash": "361619901ca96eb9ce12543bf4e47c67e0ededcd0b45733e16573c4caa776a07",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q058",
+      "locator": "Questão 58",
+      "content_hash": "87cee414c6369d530d9e88e88a142da1c66625e1a4f69e838ea605159d4fcf8b",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q059",
+      "locator": "Questão 59",
+      "content_hash": "32274c5f096da23871087cd429f4fad8cba0a4138babe6c591343425b1fcb89f",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q060",
+      "locator": "Questão 60",
+      "content_hash": "76b05e282447b895ea7a61c62a846862bafdb370ee373e4940dc846446aade43",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q061",
+      "locator": "Questão 61",
+      "content_hash": "ceda7563f5609626a6f70c88ec864b573d863e04115325a254245d9a2a8c151c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q062",
+      "locator": "Questão 62",
+      "content_hash": "36d0693002ef2c3d2dfb8f5aa3025411114be6f8c62179cdb7457a04de739710",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q063",
+      "locator": "Questão 63",
+      "content_hash": "1a3a305f2649bf58c97170f26aabddc644123f693bd02a82919e5416b21bcde0",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q064",
+      "locator": "Questão 64",
+      "content_hash": "8841921628cc044698e960248ff5340f9513d64b6825d5363f41334cc6291d22",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q065",
+      "locator": "Questão 65",
+      "content_hash": "2ab3db561528597ea39c2f5fea78ca890423560279ce585376da8f45703becd4",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q066",
+      "locator": "Questão 66",
+      "content_hash": "78deb61daf29138875602c477efac9c6a95a2436aefab099365366d10d548298",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q067",
+      "locator": "Questão 67",
+      "content_hash": "b47b1265e6477bc6257df56eaddb2dfc6cd19b1a76040ef3214933c4eb0ac7f8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q068",
+      "locator": "Questão 68",
+      "content_hash": "5fdceb9a68593b49d408433e634ae1578e641b161260e22279ce2f232e04064a",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q069",
+      "locator": "Questão 69",
+      "content_hash": "22a0ceda676c1b186968590203f9ecae3c31b1204dac4b8f0a87f914b736a46b",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q070",
+      "locator": "Questão 70",
+      "content_hash": "6e3ead4286151c892053881e54505ec0c70786c235a845aafd6711d8f0695070",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q071",
+      "locator": "Questão 71",
+      "content_hash": "f6049582a3ebadf048f90ab22b6444bc9a6d35e615c51f5bfcd85f74c29f4a66",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q072",
+      "locator": "Questão 72",
+      "content_hash": "b4313b4ad78dcf53c4a9ade6a4b94927193704962f640fda8eabf37e87315f48",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q073",
+      "locator": "Questão 73",
+      "content_hash": "7de1e1b5d22fdde3d3332ff12054d662e6760700ebeb2fd565f08eb5134159c0",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q074",
+      "locator": "Questão 74",
+      "content_hash": "aae2719c78d4e42ec57abd9dbda3b3a462e653dabd6a558ad24ee95bc64752ae",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q075",
+      "locator": "Questão 75",
+      "content_hash": "b322152477f0e65073fbe3ea674500746e099260056bb8c711434311838fb211",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q076",
+      "locator": "Questão 76",
+      "content_hash": "4794dd68b0f74ae73e1fb256806b4a791223554ec2994ed0a38d8f003a6a7c5f",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q077",
+      "locator": "Questão 77",
+      "content_hash": "d4f27db9c3685b69285628098a1af0b01510d9dd473fd10e045d63aa6bab59a0",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q078",
+      "locator": "Questão 78",
+      "content_hash": "a90863f2bd4b4b82ed9a628f310cede0bebff5044f66e05a3682d9d9fea8ada8",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q079",
+      "locator": "Questão 79",
+      "content_hash": "62e1d82e5116a35640e405fade13ec9ec9153a59e536cd721f75eb74f659f2dc",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q080",
+      "locator": "Questão 80",
+      "content_hash": "54c88e1cddcbeb2d3637594a8f4b98b18bf921df995ad9348f4bc037b07a8286",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q081",
+      "locator": "Questão 81",
+      "content_hash": "8e940d31e1340fc3258c81087c8c53f4b4fe7f767c65283c289961d7bbb969b4",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q082",
+      "locator": "Questão 82",
+      "content_hash": "9cc29ce668f2f41e0ea846826f3dfd3275013a44acad00f712bbd96519467b5c",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q083",
+      "locator": "Questão 83",
+      "content_hash": "0ebbcbaa246b448e544469c88a4585e05a8e60a5f728fab0f6e6e0365bdd68da",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q084",
+      "locator": "Questão 84",
+      "content_hash": "52bdc78a0fbbd46a4d3b0e5860a1ab4fa70b0a6e0ad09332ef191ee0c7ba1034",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q085",
+      "locator": "Questão 85",
+      "content_hash": "bc81ada8f3cee8412fdb8ff0cbff3fd5f6d92150df124b3f75322ac4b92597dd",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q086",
+      "locator": "Questão 86",
+      "content_hash": "aaba580b9bf51f2b69590c72619015c45deb3460b75ac90e89623ecd43bf17d1",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q087",
+      "locator": "Questão 87",
+      "content_hash": "c83f922bad8e8e1ed8fb87812c87cddfb62402524d8dacae87c4dff60aedeb98",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q088",
+      "locator": "Questão 88",
+      "content_hash": "6718a3fb41f32c0acbe9199d935d61c41b0df0e14fd124e5fe4b31937d67b3b6",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "excluded",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q089",
+      "locator": "Questão 89",
+      "content_hash": "3807007e7c3febb92d53f01fce1bd5b043fd322736072731fb66266dea2170af",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q090",
+      "locator": "Questão 90",
+      "content_hash": "aa8d1372db92f46a20a67041649801d545b7e436c50b6054be1fd202d94155ea",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q091",
+      "locator": "Questão 91",
+      "content_hash": "9a6321c6fad536a7098c3e3f2468ad2617080c376e24dc18a7e15e2622a8ec6d",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q092",
+      "locator": "Questão 92",
+      "content_hash": "69e208757d6b756edf45c633636a66069a8735293c21e316f2f6f29e2e90d1bc",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q093",
+      "locator": "Questão 93",
+      "content_hash": "45acf8a0b6a8544443079a922dfe1b07fa6dae05f1f7f0dacb266703e13f62ad",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q094",
+      "locator": "Questão 94",
+      "content_hash": "56f336a6fecbcd9c319d9f6a7c08c020ec2a37aa0caa161251a4fb166f5956a7",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q095",
+      "locator": "Questão 95",
+      "content_hash": "7fb9e630373372371072b744d9339c43509028f466b1559329294cc8748521cc",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "B",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q096",
+      "locator": "Questão 96",
+      "content_hash": "1e92976bef77b7bd3fb5ba587483207315ed405a9f199f37c6b3d42365213b0b",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "D",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q097",
+      "locator": "Questão 97",
+      "content_hash": "9ef2de10cf8dcacd8e06436550003a4d96848513dd1651b5d9039eff739a0fd6",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q098",
+      "locator": "Questão 98",
+      "content_hash": "f5d29132320cde23f14b1c5b32c513bf53ae39faf0577f6512e8480a692bf706",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "C",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q099",
+      "locator": "Questão 99",
+      "content_hash": "797faaa9cd8c6cd840e8f933bd808f84ce59e14329e3de08cf33ac11650a9611",
+      "metrics": {},
+      "metadata": {
+        "official_answer": "A",
+        "official_key_status": "valid",
+        "text_extraction_status": "pending"
+      }
+    },
+    {
+      "external_id": "ENAMED2025-C01-Q100",
+      "locator": "Questão 100",
+      "content_hash": "0cbba06aa50f5ade3ee096679cbc71ea99f95f16c1331b34d6b6a9d8c5186b94",
+      "metrics": {},
+      "metadata": {
+        "official_answer": null,
+        "official_key_status": "annulled",
+        "text_extraction_status": "pending"
+      }
+    }
+  ]
+}
