@@ -136,3 +136,45 @@ begin
 end $$;
 revoke all on function public.admin_dashboard() from public;
 grant execute on function public.admin_dashboard() to authenticated;
+
+create type public.reference_source_kind as enum ('official_enamed','official_enade_medicine','official_revalida','public_progress_test','third_party_mock','institutional_reference');
+create type public.reference_usage_policy as enum ('publishable','reference_only','prohibited');
+create table public.reference_sources (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  kind public.reference_source_kind not null,
+  usage_policy public.reference_usage_policy not null,
+  rights_verified boolean not null default false,
+  publisher text not null,
+  year integer not null check(year between 2000 and 2100),
+  source_url text not null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  check(usage_policy<>'publishable' or rights_verified)
+);
+create table public.reference_items (
+  id uuid primary key default gen_random_uuid(),
+  source_id uuid not null references public.reference_sources(id) on delete cascade,
+  external_id text not null,
+  locator text not null,
+  content_hash text not null check(content_hash~'^[a-f0-9]{64}$'),
+  body jsonb,
+  metrics jsonb not null default '{}'::jsonb,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  unique(source_id,external_id)
+);
+create or replace function public.enforce_reference_item_policy() returns trigger
+language plpgsql set search_path=public as $$
+declare policy public.reference_usage_policy;
+begin
+  select usage_policy into policy from public.reference_sources where id=new.source_id;
+  if policy is null then raise exception 'Fonte de referência inexistente'; end if;
+  if policy<>'publishable' and new.body is not null then raise exception 'Fonte apenas referencial não pode armazenar texto integral'; end if;
+  return new;
+end $$;
+create trigger reference_item_policy before insert or update on public.reference_items for each row execute procedure public.enforce_reference_item_policy();
+alter table public.reference_sources enable row level security;
+alter table public.reference_items enable row level security;
+create policy "editors read reference sources" on public.reference_sources for select using(public.current_app_role() in ('reviewer','admin'));
+create policy "editors read reference items" on public.reference_items for select using(public.current_app_role() in ('reviewer','admin'));
