@@ -14,13 +14,13 @@ export type SavedQuestion = { questionId: string; version: number };
 let client: SupabaseClient | null | undefined;
 
 export function databaseConfigured() {
-  return Boolean(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
+  return Boolean(process.env.SUPABASE_URL && (process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY));
 }
 
 function database() {
   if (client !== undefined) return client;
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   client = url && key ? createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } }) : null;
   return client;
 }
