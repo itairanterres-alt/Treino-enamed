@@ -2,7 +2,7 @@ import type{z}from'zod';
 import type{reviewSchema}from'./schema.js';
 
 type Review=z.infer<typeof reviewSchema>;
-export const RUBRIC_LABELS={decision_focus:'Foco decisório',data_sufficiency:'Suficiência dos dados',distractor_plausibility:'Plausibilidade dos distratores',cue_absence:'Ausência de pistas',clinical_safety:'Segurança clínica'}as const;
+export const RUBRIC_LABELS={decision_focus:'Foco decisório',data_sufficiency:'Suficiência dos dados',distractor_plausibility:'Plausibilidade dos distratores',cue_absence:'Ausência de pistas',clinical_safety:'Segurança clínica',vignette_necessity:'Necessidade da vinheta',intern_appropriateness:'Adequação ao interno',option_homogeneity:'Homogeneidade das alternativas',distractor_quality:'Qualidade dos distratores'}as const;
 
 export function rubricIssues(review:Review){
  return(Object.keys(RUBRIC_LABELS)as Array<keyof typeof RUBRIC_LABELS>)
