@@ -5,9 +5,10 @@ reduz configuração de CORS e evita dois serviços no piloto.
 
 ## 1. Supabase
 
-1. Crie um projeto e execute `supabase/schema.sql` no SQL Editor.
-2. Em Authentication, habilite login por e-mail e configure a URL pública como redirect permitido.
-3. Defina o primeiro administrador alterando `profiles.role` para `admin` diretamente no painel.
+1. Conecte o projeto ao repositório GitHub com working directory `.` e implantação da branch `main`.
+2. Confirme que as migrações de `supabase/migrations/` criaram as tabelas no Table Editor.
+3. Em Authentication, habilite login por e-mail e configure a URL pública como redirect permitido.
+4. Defina o primeiro administrador alterando `profiles.role` para `admin` diretamente no painel.
 
 ## 2. Render
 
@@ -15,8 +16,8 @@ reduz configuração de CORS e evita dois serviços no piloto.
 2. Cadastre as variáveis marcadas como secretas em `render.yaml`.
 3. Use a URL criada pela Render como Site URL e Redirect URL no Supabase.
 
-As variáveis `VITE_SUPABASE_*` são incorporadas durante o build e contêm somente a chave pública.
-`SUPABASE_SERVICE_ROLE_KEY`, `ANTHROPIC_API_KEY` e `GEMINI_API_KEY` ficam exclusivas no servidor.
+`VITE_SUPABASE_PUBLISHABLE_KEY` é incorporada durante o build e pode ser pública porque o acesso é protegido por RLS.
+`SUPABASE_SECRET_KEY`, `ANTHROPIC_API_KEY` e `GEMINI_API_KEY` ficam exclusivas no servidor.
 
 ## 3. Verificação mínima
 
