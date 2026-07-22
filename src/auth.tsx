@@ -7,8 +7,8 @@ export type AppUser={id:string;email:string;name:string;phase:number;role:Role;m
 type AuthValue={user:AppUser|null;loading:boolean;signIn:(email:string)=>Promise<string>;enterDemo:(role:'student'|'admin')=>void;signOut:()=>Promise<void>};
 const AuthContext=createContext<AuthValue|null>(null);
 const url=import.meta.env.VITE_SUPABASE_URL as string|undefined;
-const anon=import.meta.env.VITE_SUPABASE_ANON_KEY as string|undefined;
-export const supabase=url&&anon?createClient(url,anon):null;
+const publishable=(import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY||import.meta.env.VITE_SUPABASE_ANON_KEY)as string|undefined;
+export const supabase=url&&publishable?createClient(url,publishable):null;
 
 async function mapUser(user:User):Promise<AppUser>{const fallback={id:user.id,email:user.email||'',name:user.user_metadata?.name||user.email?.split('@')[0]||'Estudante',phase:Number(user.user_metadata?.phase||9),role:'student' as Role,mode:'supabase' as const};if(!supabase)return fallback;const {data}=await supabase.from('profiles').select('name,phase,role').eq('id',user.id).maybeSingle();return data?{...fallback,name:data.name,phase:Number(data.phase||9),role:data.role as Role}:fallback}
 export function AuthProvider({children}:{children:ReactNode}){
