@@ -48,9 +48,9 @@ alter table public.questions enable row level security;
 alter table public.question_versions enable row level security;
 alter table public.attempts enable row level security;
 create policy "profile own read" on public.profiles for select using (auth.uid()=id);
-create policy "published questions read" on public.questions for select using (status in ('auto_verified','human_reviewed'));
+create policy "published questions read" on public.questions for select using (status='human_reviewed');
 create policy "published question versions read" on public.question_versions for select using (
-  exists(select 1 from public.questions q where q.id=question_id and q.current_version=version and q.status in ('auto_verified','human_reviewed'))
+  exists(select 1 from public.questions q where q.id=question_id and q.current_version=version and q.status='human_reviewed')
 );
 create policy "attempt own read" on public.attempts for select using (auth.uid()=user_id);
 create policy "attempt own insert" on public.attempts for insert with check (auth.uid()=user_id);
