@@ -1,0 +1,7 @@
+.studioLayout{grid-template-columns:360px 1fr}
+.studioForm input,.studioForm select,.studioForm textarea{border:1px solid #d3ded7;border-radius:8px;background:white;padding:10px;font:inherit;color:#28372f}
+.studioForm textarea{min-height:90px;resize:vertical}
+.auditGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.auditGrid span{display:grid;gap:3px;padding:10px;border-radius:8px;background:#f5f7f6;font-size:10px;text-transform:uppercase;color:#728178}
+.auditGrid b{font-size:12px;text-transform:none;color:#28372f}
+@media(max-width:900px){.studioLayout,.auditGrid{grid-template-columns:1fr}}
