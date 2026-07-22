@@ -2,7 +2,7 @@ services:
   - type: web
     name: treino-enamed
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /api/health
     envVars:
       - key: ANTHROPIC_API_KEY
