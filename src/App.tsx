@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { BookOpenCheck, Brain, ChartNoAxesColumnIncreasing, ChevronRight, CircleAlert, ClipboardCheck, FlaskConical, Home, Library, LogOut, RotateCcw, ShieldCheck, Sparkles } from 'lucide-react';
+import { BookOpenCheck, Brain, ChartNoAxesColumnIncreasing, ChevronRight, CircleAlert, ClipboardCheck, FlaskConical, Home, Info, Library, LogOut, RotateCcw, ShieldCheck, Sparkles } from 'lucide-react';
 import type { Alternative, Attempt, Question } from './types';
 import { useAttempts } from './useAttempts';
 import { useQuestionBank } from './useQuestionBank';
@@ -16,7 +16,7 @@ import type { LegalDocument } from './LegalContent';
 type Page='home'|'train'|'review'|'progress'|'studio'|'editorial'|'admin'|'about'|'terms'|'privacy'|'ai';
 const consentKey='treino-consent-v2';
 const labels={especialista:'Revisada por especialista',verificada_ia:'Verificada automaticamente',experimental:'Experimental'} as const;
-const nav=[['home','Início',Home],['train','Treinar',Brain],['review','Revisar',RotateCcw],['progress','Progresso',ChartNoAxesColumnIncreasing]] as const;
+const nav=[['home','Início',Home],['train','Treinar',Brain],['review','Revisar',RotateCcw],['progress','Progresso',ChartNoAxesColumnIncreasing],['about','Sobre',Info]] as const;
 
 export function App(){
  const [page,setPage]=useState<Page>('home'); const {user,loading,signOut}=useAuth(); const {attempts,add,persistenceError}=useAttempts(user);const [catalogMode,setCatalogMode]=useState<TrainingCatalogMode>(()=>localStorage.getItem('treino-catalog-mode')==='reviewed_only'?'reviewed_only':'all_verified'); const {questions:bank,loading:bankLoading,error:bankError}=useQuestionBank(user,catalogMode);

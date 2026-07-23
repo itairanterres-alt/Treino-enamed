@@ -3,11 +3,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import cors from 'cors';
+import multer from 'multer';
 import { ZodError } from 'zod';
 import { runPipeline } from './pipeline.js';
 import { assertAdminToken, assertEditorToken, savePipelineResult } from './database.js';
 import { cancelGenerationJob, createGenerationJob, listGenerationJobs, resumeGenerationJob } from './job-store.js';
 import { startGenerationWorker } from './job-worker.js';
+import { structureImport } from './import-parser.js';
 
 const app = express();
 const port = Number(process.env.PORT || process.env.API_PORT || 8787);
@@ -16,6 +18,7 @@ app.disable('x-powered-by');
 app.use(cors({ origin: process.env.APP_ORIGIN || (production ? false : 'http://localhost:5173') }));
 app.use(express.json({ limit: '2mb' }));
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
+const upload=multer({storage:multer.memoryStorage(),limits:{fileSize:15*1024*1024,files:1}});
 
 app.post('/api/questions/generate', async (req, res) => {
   try {
@@ -61,6 +64,16 @@ app.post('/api/jobs/:id/cancel',async(req,res)=>{
  }catch(error){respondError(res,error)}
 });
 
+app.post('/api/import/parse',upload.single('file'),async(req,res)=>{
+ try{
+  await assertAdminToken(req.header('authorization'));
+  if(!req.file)return res.status(422).json({error:'file_required',message:'Escolha um arquivo para importar.'});
+  const policy=req.body.policy;
+  if(policy!=='publishable'&&policy!=='reference_only')return res.status(422).json({error:'policy_invalid',message:'Escolha a política de uso da fonte.'});
+  res.json(await structureImport(req.file,policy));
+ }catch(error){respondError(res,error)}
+});
+
 if (production) {
   const webRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../dist');
   app.use(express.static(webRoot, { maxAge: '1h', index: false }));
@@ -75,6 +88,7 @@ app.listen(port, () => {
 });
 
 function respondError(res:express.Response,error:unknown){
+ if(error instanceof multer.MulterError)return res.status(error.code==='LIMIT_FILE_SIZE'?413:422).json({error:'upload_invalid',message:error.code==='LIMIT_FILE_SIZE'?'O arquivo excede o limite de 15 MB.':'Não foi possível receber o arquivo.'});
  if(error instanceof ZodError)return res.status(422).json({error:'schema_invalid',issues:error.issues,message:'O lote não corresponde ao formato esperado.'});
  const message=error instanceof Error?error.message:'Falha desconhecida';
  if(message==='AUTH_REQUIRED')return res.status(401).json({error:'auth_required',message:'Faça login para continuar.'});
