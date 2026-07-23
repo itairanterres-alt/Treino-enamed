@@ -10,4 +10,5 @@ import './persistence.css';
 import './editorial.css';
 import './admin-dashboard.css';
 import './catalog.css';
+import './bank-factory.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><AuthProvider><App/></AuthProvider></React.StrictMode>);
