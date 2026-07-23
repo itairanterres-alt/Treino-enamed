@@ -11,6 +11,7 @@ Protótipo independente de treino formativo para o ENAMED. Não possui vínculo 
 - leitura de calibração confiança × acerto;
 - fábrica autônoma de questões no painel administrativo;
 - geração inédita ou adaptação de bancos com uso autorizado;
+- importação direta de JSON, CSV/XLSX, TXT, DOCX e PDF;
 - fila persistente, limite de custo, revisão cega e reparo automático;
 - estados explícitos de revisão.
 
