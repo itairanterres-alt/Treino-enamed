@@ -41,9 +41,11 @@ create index if not exists generation_job_items_pending_idx on public.generation
 alter table public.generation_jobs enable row level security;
 alter table public.generation_job_items enable row level security;
 
+drop policy if exists "admins read generation jobs" on public.generation_jobs;
 create policy "admins read generation jobs" on public.generation_jobs
 for select using(public.current_app_role()='admin');
 
+drop policy if exists "admins read generation job items" on public.generation_job_items;
 create policy "admins read generation job items" on public.generation_job_items
 for select using(
   public.current_app_role()='admin'
@@ -52,7 +54,7 @@ for select using(
 
 -- Recupera itens abandonados por reinício do servidor e reivindica somente um.
 create or replace function public.claim_generation_job_item()
-returns table(item_id uuid,job_id uuid,position integer,mode text,config jsonb,input jsonb,budget_usd numeric,current_cost_usd numeric)
+returns table(item_id uuid,job_id uuid,"position" integer,mode text,config jsonb,input jsonb,budget_usd numeric,current_cost_usd numeric)
 language plpgsql security definer set search_path=public as $$
 declare selected_item public.generation_job_items;
 declare selected_job public.generation_jobs;
